@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./FormView.css"
 
 function FormView({formHead, formFoot, formData}) {
     return (
         <div>
-            <div>
-                <h2>{formHead}</h2>
+            <div className="formBackground">
+                <h2 className="formHeading ">{formHead}</h2>
 
                 <form>
                     {formData.inputs.map((input) => (
@@ -15,6 +16,7 @@ function FormView({formHead, formFoot, formData}) {
                                 name={input.name}
                                 placeholder={input.placeholder}
                                 onChange={input.handler}
+                                className="inputField"
                             />
                         </div>
                     ))}
