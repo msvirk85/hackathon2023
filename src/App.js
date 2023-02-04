@@ -1,5 +1,4 @@
 import Login from "./Pages/Login";
-import Home from "./Pages/Home.jsx"
 import {
     BrowserRouter as Router,
     Routes,
