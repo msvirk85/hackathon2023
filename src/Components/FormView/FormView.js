@@ -5,6 +5,7 @@ function FormView({formHead, formFoot, formData}) {
     return (
         <div>
             <div>
+                <h1>APP NAME</h1>
                 <h2>{formHead}</h2>
 
                 <form>
