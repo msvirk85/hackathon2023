@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import FormView from "../Components/FormView/FormView";
 
 function Login() {
+
+    // STATES
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
     return (
         <div>
             <FormView
@@ -18,7 +23,6 @@ function Login() {
                             name: "email",
                             placeholder: "Enter your email address",
                             handler: (e) => setEmail(e.target.value),
-                            error: emailError,
                         },
                         {
                             key: "password",
@@ -26,13 +30,9 @@ function Login() {
                             name: "password",
                             placeholder: "Enter your password",
                             handler: (e) => setPassword(e.target.value),
-                            error: passwordError,
+  
                         },
                     ],
-                }}
-                handlers={{
-                    formHandler: handleLogin,
-                    checkHandler: (e) => setRememberMe(true)
                 }}
             />
         </div>

@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function FormView({ formHead, formFoot, formData, handlers }) {
+function FormView({formHead, formFoot, formData}) {
     return (
         <div>
             <div>
                 <h2>{formHead}</h2>
 
-                <form onSubmit={handlers.formHandler}>
+                <form>
                     {formData.inputs.map((input) => (
                         <div key={input.key}>
                             <input
@@ -16,9 +16,6 @@ function FormView({ formHead, formFoot, formData, handlers }) {
                                 placeholder={input.placeholder}
                                 onChange={input.handler}
                             />
-                            {input.error && (
-                                <p>{input.error}</p>
-                            )}
                         </div>
                     ))}
                     <div>
@@ -26,16 +23,17 @@ function FormView({ formHead, formFoot, formData, handlers }) {
                     </div>
                     {formHead === "Login" && (
                         <div>
+                            <div>
+                                <input type="checkbox" name="rememberMe"/>
+                                Remember Me
+                            </div>
                             <Link to={"/forgotpassword"} target="_blank">
-                                Forgotten password?
+                                Forgot password?
                             </Link>
-                            <input type="checkbox" name="rememberMe" onChange={handlers.checkHandler}/>
                         </div>
                     )}
                     <div>
-                        <Link to={formFoot.link}>
-                            {formFoot.name}
-                        </Link>
+                        <Link to={formFoot.link}>{formFoot.name}</Link>
                     </div>
                 </form>
             </div>
