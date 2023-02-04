@@ -1,5 +1,6 @@
 import "./App.css";
 import Login from "./Pages/Login";
+import Home from "./Pages/Home.jsx"
 import {
     BrowserRouter as Router,
     Routes,
@@ -12,6 +13,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/login" element={<Login />} />
+                    <Route path= "/" element={<Home />}/>
                 </Routes>
             </Router>
         </div>
