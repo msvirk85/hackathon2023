@@ -1,0 +1,10 @@
+#This file contains ideas about project improvement
+
+1) UI
+- in-app booking
+- show the trending events
+- recommended locations
+- recurring events, special events like Chinook Blast for Winters, Stampede for summer
+
+2) Pitch
+- be focused on the value we are adding, what differntiates us from others 
